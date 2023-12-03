@@ -1,0 +1,18 @@
+import React, { useState } from 'react'
+
+// a hook that is going to be rehuzable
+const useCounter = (initialValue, stock) => {
+    const [count, setCount] = useState(initialValue)
+
+    const increment = () => {
+        count < stock && setCount(count + 1)
+    }
+
+    const decrement = () =>  {
+        count > 0 && setCount(count - 1)
+    }
+
+  return {count, increment, decrement}
+}
+
+export default useCounter
