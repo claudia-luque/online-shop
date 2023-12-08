@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-// a hook that is going to be rehuzable
 const useCounter = (initialValue, stock) => {
     const [count, setCount] = useState(initialValue)
 

@@ -1,19 +1,19 @@
 import React from 'react'
 import Item from '../Item/Item'
+import { Box, Flex } from '@chakra-ui/react'
 
 const ItemList = ({data}) => {
-    // console.log(data.map(product => console.log(product.name)))
+
   return (
-    <div>
+    <Flex flexWrap="wrap" justifyContent="space-around">
         {
          data.map((product) => (
-            <div key={product.id}>
-                {/* <Item product = {product}/> */}
+            <Box key={product.id}>
                 <Item {...product}/>
-            </div>
+            </Box>
          ))
         }
-    </div>
+    </Flex>
   )
 }
 
