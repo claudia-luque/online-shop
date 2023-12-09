@@ -25,16 +25,15 @@ const ItemDetail = ({category, description, img, name, price, id, stock}) => {
     />
     <Stack mt='6' spacing='3'>
         <Heading size='md'>{name}</Heading>
-        <Text color='blue.600' fontSize='2x1'>{description}</Text>
-        <Text color='blue.600' fontSize='2xl'>
-        ${price}
-        </Text>
+        <Text color='black' fontSize='2x1'>{description}</Text>
+        <Text color="black" fontWeight="bold" fontSize='2xl'>${price}</Text>
     </Stack>
     </CardBody>
     <Divider />
     <CardFooter>
-        {quantity > 0 ? <Link to={`/cart`}>Ir al carrito</Link> : 
-       <ItemCount initialValue={1} stock={stock} onAdd={onAdd}/>}
+        {quantity > 0 ? 
+            <Link to={`/cart`}><Button ackgroundColor='#FFDB99' _hover={{backgroundColor: '#e7a937'}}>Ir al carrito</Button></Link> : 
+            <ItemCount initialValue={1} stock={stock} onAdd={onAdd}/>}
     </CardFooter>
     </Card>
   )

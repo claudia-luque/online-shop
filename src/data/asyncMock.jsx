@@ -13,7 +13,7 @@ const products = [
         name: "Peter Rabbit",
         category: "Kids",
         img: 'https://i.postimg.cc/d3z7fsbr/Screenshot-2023-12-02-at-22-55-03.png',
-        description: 'Best book ever',
+        description: 'Our favourite furry friend, Peter Rabbit, is available in a new beautiful board book edition of the classic tale. This board book format is perfect for families to share and read all about Peter Rabbit\'s very first adventure!',
         price: 6,
         stock: 5
     },
