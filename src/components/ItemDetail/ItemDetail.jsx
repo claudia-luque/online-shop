@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, Image, Stack, Heading, Text, Divider, ButtonGroup, Button, CardBody, CardFooter } from '@chakra-ui/react'
-import { Link } from 'react-router-dom';
+import { Card, Image, Stack, Heading, Text, Divider, ButtonGroup, Button, CardBody, CardFooter, Link as ChakraLink } from '@chakra-ui/react'
+import { Link as ReactRouterLink} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react'
 
@@ -32,7 +32,7 @@ const ItemDetail = ({category, description, img, name, price, id, stock}) => {
     <Divider />
     <CardFooter>
         {quantity > 0 ? 
-            <Link to={`/cart`}><Button ackgroundColor='#FFDB99' _hover={{backgroundColor: '#e7a937'}}>Ir al carrito</Button></Link> : 
+            <ChakraLink as={ReactRouterLink} to={`/cart`} bg="#FFDB99" >Ir al carrito</ChakraLink> : 
             <ItemCount initialValue={1} stock={stock} onAdd={onAdd}/>}
     </CardFooter>
     </Card>

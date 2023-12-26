@@ -10,7 +10,6 @@ import PageNotFound from './components/PageNotFound/PageNotFound'
 // itemId viene de useParams in ItemDetailContainer
 function App() {
   return (
-    <>
       <ChakraProvider>
       <BrowserRouter>
         <NavBar/>
@@ -23,7 +22,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
-    </>
   )
 }
 

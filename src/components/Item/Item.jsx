@@ -25,7 +25,7 @@ return (
     <Divider />
     <CardFooter>
     <ButtonGroup spacing='2'>
-        <Button variant='solid' backgroundColor='#FFDB99' _hover={{backgroundColor: '#e7a937'}}>
+        <Button variant='solid' bg='#FFDB99' _hover={{bg: '#e7a937'}}>
         <Link to={`/product/${id}`} > Ver detalle</Link>
         </Button>
     </ButtonGroup>

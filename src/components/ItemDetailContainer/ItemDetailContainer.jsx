@@ -3,6 +3,7 @@ import { getProductById } from '../../data/asyncMock'
 import { useParams } from 'react-router-dom';
 import { Spinner } from '@chakra-ui/react'
 import ItemDetail from '../ItemDetail/ItemDetail';
+import LoaderComponent from '../LoaderComponent/LoaderComponent'
 
 // Obtiene la informacion de un producto
 const ItemDetailContainer = () => {
@@ -10,7 +11,7 @@ const ItemDetailContainer = () => {
     const [isLoading, setIsLoading] = useState(true)
     // Access the parameters from the current route
     const {itemId} = useParams()
-
+    console.log("here")
     useEffect(() => {
         setIsLoading(true)
         getProductById(itemId).then((prod) => {
@@ -20,13 +21,8 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        {isLoading ? <Spinner
-            thickness='4px'
-            speed='0.65s'
-            emptyColor='gray.200'
-            color='blue.500'
-            size='xl'
-            /> : <ItemDetail {...product}/> }
+        {isLoading ? <LoaderComponent loading={isLoading}/>
+        : <ItemDetail {...product}/> }
     </div>
   )
 }
